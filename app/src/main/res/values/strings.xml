@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SportsApp</string>
+
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_sports">My Sports</string>
+    <string name="boxing">Boxing</string>
+    <string name="hockey">Hockey</string>
+    <string name="soccer">soccer</string>
+
+    <string name="hockey_detail_screen">Hockey detail screen</string>
+    <string name="soccer_detail_screen">Soccer detail screen</string>
+    <string name="boxing_detail_screen">Boxing detail screen</string>
+</resources>

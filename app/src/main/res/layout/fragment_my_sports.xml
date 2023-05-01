@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MySportsFragment"
+    >
+
+    <data>
+        <variable
+            name="mySportsFragment"
+            type="com.example.sportsapp.MySportsFragment" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/soccerButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/soccer"
+        android:onClick="@{() -> mySportsFragment.goToSportDetail(@id/action_mySportsFragment_to_soccerFragment)}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Boxing"
+        android:onClick="@{() -> mySportsFragment.goToSportDetail(@id/action_mySportsFragment_to_boxingFragment)}"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/boxing"
+        app:layout_constraintStart_toEndOf="@id/soccerButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/hockey"
+        android:onClick="@{() -> mySportsFragment.goToSportDetail(@id/action_mySportsFragment_to_hockeyFragment)}"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hockey"
+        app:layout_constraintStart_toEndOf="@id/Boxing"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

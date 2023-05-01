@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sportsapp.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.sportsapp.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sportsapp.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/mySportsFragment"
+        android:name="com.example.sportsapp.MySportsFragment"
+        android:label="My Sports"
+        tools:layout="@layout/fragment_my_sports" >
+        <action
+            android:id="@+id/action_mySportsFragment_to_hockeyFragment"
+            app:destination="@id/hockeyFragment" />
+        <action
+            android:id="@+id/action_mySportsFragment_to_boxingFragment"
+            app:destination="@id/boxingFragment" />
+        <action
+            android:id="@+id/action_mySportsFragment_to_soccerFragment"
+            app:destination="@id/soccerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hockeyFragment"
+        android:name="com.example.sportsapp.HockeyFragment"
+        android:label="Hockey"
+        tools:layout="@layout/fragment_hockey" />
+    <fragment
+        android:id="@+id/soccerFragment"
+        android:name="com.example.sportsapp.SoccerFragment"
+        android:label="Soccer"
+        tools:layout="@layout/fragment_soccer" />
+    <fragment
+        android:id="@+id/boxingFragment"
+        android:name="com.example.sportsapp.BoxingFragment"
+        android:label="Boxing"
+        tools:layout="@layout/fragment_boxing" />
+</navigation>
